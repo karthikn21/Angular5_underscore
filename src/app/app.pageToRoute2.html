@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>To Perform Multiplication</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">A Value</label>
+        <input type="number" [(ngModel)]="valA" name="A" class="form-control" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">B Value</label>
+        <input type="number" [(ngModel)]="valB" name="B" class="form-control" id="alterEgo">
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!valA || !valB" (click)="mul(valA,valB)">Calculate</button>
+      <h2>Result is {{result}}</h2>
+    </form>
+</div>
